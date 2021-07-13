@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;800;900&family=Roboto:wght@100;300;500;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: aqua;
+    display:  grid;
+    grid-template-columns: repeat(8, 1fr); /*100px, 1fr; la 2da columna toma el espacio restante*/
+    padding: 40px 16px;
+}
+
+.navbar .logo {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    grid-row: 1 / 3;
+}
+
+.navbar .menu-main {
+    grid-column: 5 / 9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.navbar .menu-socialMedia {
+    grid-column: 6 / 9;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .menu-main li, .navbar .menu-socialMedia li, .container-menu-footer .menu-footer li {
+    list-style: none;
+}
+
+.navbar .menu-main li a, .container-menu-footer .menu-footer li a {
+    margin-left: 30px;
+    font-family: Montserrat,sans-serif;
+    letter-spacing: .2em;
+    text-decoration: none;
+    color: #643a39;
+    font-size: 1rem;
+    padding: 15px 0 0;
+}
+
+.navbar .menu-socialMedia li a, .container-menu-footer .menu-footer li a{
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.container-menu-footer .menu-footer li a{
+    padding: 10px 15px;
+}
+
+.navbar .menu-socialMedia li svg {
+    width: 30px;
+    height: 30px;
+    fill: #ded4c8;
+}
+
+aside.heroina-image{
+    height: 66vh;
+}
+
+aside.heroina-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    display: grid;
+    margin-top: 240px;
+    margin-bottom: 30px;
+}
+
+.footer .logo {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+
+.container-menu-footer {
+    
+    text-align: center;
+
+}
+
+.container-menu-footer .menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer .copyright {
+    font-family: Montserrat,sans-serif;
+    color: #ded4c8;
+    font-size: .8rem;
+    letter-spacing: .3rem;
+    margin-top: 60px;
+    text-align: center;
+}
+
+@media screen and (max-width:768px){
+    
+    aside.heroina-image img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+    }
+}
